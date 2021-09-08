@@ -12,8 +12,11 @@ public class SampleController {
     @Value("${sample.message}")
      String message;
 
+    @Value("${sample.secret-message}")
+    String message2;
+
     @RequestMapping(value = "/sample", method = RequestMethod.GET)
     public String sample() {
-        return message;
+        return message + ",\n" + message2;
     }
 }

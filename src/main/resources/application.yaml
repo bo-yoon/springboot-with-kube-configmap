@@ -5,7 +5,7 @@ spring:
 
 sample:
   message: "Local message"
-
+  secret-message: "Local secret message"
 
 ---
 spring:
@@ -13,3 +13,4 @@ spring:
 
 sample:
   message: ${MESSAGE}
+  secret-message: ${SECRET-MESSAGE}

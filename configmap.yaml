@@ -4,4 +4,4 @@ kind: ConfigMap
 metadata:
   name: sample-configmap
 data:
-  message: "kubernetes configmap message"
+  message: "kubernetes configmap message!! I  was changed"

@@ -7,7 +7,7 @@ metadata:
   name: app-sample
 spec:
   containers:
-  - image: yoonkwon23/kube-config:2.1
+  - image: yoonkwon23/kube-config:v2.4
     name: app-sample
     ports:
     - containerPort: 8090
@@ -18,6 +18,11 @@ spec:
         configMapKeyRef:
           name: sample-configmap
           key: message
+    - name: SECRET-MESSAGE
+      valueFrom:
+        secretKeyRef:
+          name: sample-secret
+          key: secretmassage
   dnsPolicy: ClusterFirst
   restartPolicy: Always
 
