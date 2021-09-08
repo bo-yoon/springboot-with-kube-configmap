@@ -1,0 +1,15 @@
+server:
+  port: 8090
+spring:
+  profiles: local
+
+sample:
+  message: "Local message"
+
+
+---
+spring:
+  profiles: stg
+
+sample:
+  message: ${MESSAGE}
